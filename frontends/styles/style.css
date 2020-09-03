@@ -1,0 +1,65 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Playfair Display', serif;
+}
+
+html {
+    font-size: 18px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+body {
+    background: linear-gradient(30deg, rgb(169, 244, 248), rgb(149, 242, 248), rgb(168, 243, 248));
+    background-size: 100vw 100vh;
+}
+
+nav {
+    background: rgb(3, 47, 85);
+    color: rgb(240, 233, 30) !important;
+    font-size: 45px;
+    box-shadow: 0px 0px 9px 7px #00070d;
+}
+
+nav a {
+    color: inherit;
+    text-shadow: 0px 0px 3px #990909;
+}
+
+nav a:hover {
+    color: white;
+}
+
+nav ul {
+    width: 100%;
+    justify-content: space-around;
+}
+
+.carousel-inner img {
+    height: 60vh;
+}
+
+.carousel-inner p,
+.carousel-inner h5 {
+    color: black;
+}
+
+#carouselContainer {
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    border: 2px solid black;
+    box-shadow: 0px 0px 7px 2px black;
+}
+
+#content {
+    display: flex;
+    flex-wrap: wrap;
+    box-shadow: 0px 0px 5px 2px black;
+}
+
+.btn-group-vertical {
+    position: relative;
+    width: 100%;
+}
