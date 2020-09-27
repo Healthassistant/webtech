@@ -1,0 +1,174 @@
+/*imports*/
+@import url('https://fonts.googleapis.com/css?family=Lobster');
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,600,600i,700,700i');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,600,600i,700,700i,800,800i,900,900i');
+
+body{
+    background: #f1f1f1;
+    color: #313030;
+    
+    box-sizing: border-box;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Poppins", sans-serif;
+    
+}
+a{
+    text-decoration: none;
+}
+
+/********************
+1. navbar css
+*********************/
+.custom-nav{
+    background-color: #3282b8;
+}
+.custom-nav li{
+    padding:0 0.5em 0 0.5em;
+}
+.custom-nav ul{
+    border: 0;
+}
+.custom-nav li a{
+    color: white;
+}
+.navbar-nav li a:hover, .navbar-nav li.active a {
+    color: #3282b8 !important;
+    background-color: #fff !important;
+  }
+
+/********************
+2. jumbotron css
+*********************/
+.jumbotron{
+    background-color: #3282b8;
+    color: #fff;
+    padding: 100px 25px 25px 25px;
+    font-family: Montserrat, sans-serif;
+}
+
+/********************
+3. carousel css
+*********************/
+
+.carousel-item img {
+    height: 30em;
+    filter: brightness(70%);
+    border-radius:0 100px 100px 0;
+    background-size: cover;
+}
+.carousel-caption{    
+    font-weight: bold;
+    font-size: 1.5em;
+    margin: 0 auto;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgb(0,0,0,0.2);
+    border: 3px solid #0f4c75;
+/*    font-family: 'Oswald', sans-serif;*/
+}
+.carousel-control-next .active, .carousel-control-prev .active {
+    background-color: #0f4c75;
+  }
+
+.carousel-indicators .active { 
+   background-color: #0f4c75; 
+    border-radius: 100%;
+    border-color: #0f4c75; 
+
+    
+} 
+.carousel-indicators li{
+    border-radius: 100%;
+    border-color: white;
+    opacity: 0.8;
+   
+}
+.caro-cont {
+   padding:5em 0;
+} 
+.btn-custom-1{
+    background: #0f4c75;
+    color: white;
+    transition: all 0.2s;
+}
+.btn-custom-1:hover{
+    color: white;
+    background: #0b3c5d;
+    border-color: #0b3c5d;
+}
+/***************
+5. services css
+****************/
+#services{
+    background: #FFF;
+    padding: 5em 0;
+    box-sizing: border-box;
+}
+.icon-card{
+    border-radius: 16px;
+    background: #313030;
+    padding: 1em;
+    margin: 0.5em;
+}
+.icon-card:hover{
+    background: #999999;
+}
+.icon-card:hover .fa{
+    box-shadow: -2px -2px 3px 3px  rgba(11,60,93,0.6);
+  -moz-box-shadow: -2px -2px 3px 3px rgba(11,60,93,0.6);
+  -webkit-box-shadow: -2px -2px 3px 3px rgba(11,60,93,0.6);
+  -o-box-shadow: -2px -2px 3px 3px rgba(11,60,93,0.6);
+  border-radius:100%;
+}
+.icon-card a{
+    color: #fff;
+    text-decoration: none;
+}
+.icon-card .fa{
+    transition: all 0.5s ease-out;
+    border-radius: 100%;
+    padding: 15px;
+/*    background-color: #0f4c75;*/
+    background-color: #3282b8;
+}
+
+/***************
+5. goal css
+****************/
+#symptom{
+    background-image: url(../images/img7.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#symptom .content article{
+    color: white;
+    background: rgba(15,76,117,0.9);
+    font-weight: 500;
+}
+#symptom .content article .imp::first-letter{
+    font-size: 2em;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+    float: left;
+}
+#symptom .content h1,#symptom .content h3{
+    background: rgba(255,255,255,0.8);
+    text-align: center;
+}
+
+/***************
+5. footer css
+****************/
+.main-footer,.main-footer a{
+    color: #999999;
+    text-decoration: none;
+    line-height: 2;
+}
+.main-footer h4{
+    color: #FFF;
+    padding: 0 5px 15px 0;
+}
