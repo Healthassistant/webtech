@@ -31,6 +31,7 @@ a{
 }
 .custom-nav li a{
     color: white;
+    border-radius: 5px;
 }
 .navbar-nav li a:hover, .navbar-nav li.active a {
     color: #3282b8 !important;
@@ -102,7 +103,7 @@ a{
 ****************/
 #services{
     background: #FFF;
-    padding: 5em 0;
+    padding: 5em 0 9em 0;
     box-sizing: border-box;
 }
 .icon-card{
@@ -110,15 +111,26 @@ a{
     background: #313030;
     padding: 1em;
     margin: 0.5em;
+     transition: all 0.3s ease-out;
+    box-shadow: 3px 2px 3px 1px rgba(0,0,0,0.6);
+  -moz-box-shadow: 3px 2px 3px 1px rgba(0,0,0,0.6);
+  -webkit-box-shadow: 3px 2px 3px 1px rgba(0,0,0,0.6);
+  -o-box-shadow: 3px 2px 3px 1px rgba(0,0,0,0.6);
+    
 }
 .icon-card:hover{
     background: #999999;
+    transition: all 0.3s ease-out;
+    box-shadow: 3px 3px 4px 4px rgba(0,0,0,0.6);
+  -moz-box-shadow: 3px 3px 4px 4px rgba(0,0,0,0.6);
+  -webkit-box-shadow: 3px 3px 4px 4px rgba(0,0,0,0.6);
+  -o-box-shadow: 3px 3px 4px 4px rgba(0,0,0,0.6);
 }
 .icon-card:hover .fa{
-    box-shadow: -2px -2px 3px 3px  rgba(11,60,93,0.6);
-  -moz-box-shadow: -2px -2px 3px 3px rgba(11,60,93,0.6);
-  -webkit-box-shadow: -2px -2px 3px 3px rgba(11,60,93,0.6);
-  -o-box-shadow: -2px -2px 3px 3px rgba(11,60,93,0.6);
+    box-shadow: 3px 3px 4px 3px rgba(0,0,0,0.4);
+  -moz-box-shadow: -3px 3px 4px 3px rgba(0,0,0,0.4);
+  -webkit-box-shadow: 3px 3px 4px 3px rgba(0,0,0,0.4);
+  -o-box-shadow: -3px 3px 4px 3px rgba(0,0,0,0.4);
   border-radius:100%;
 }
 .icon-card a{
@@ -129,23 +141,27 @@ a{
     transition: all 0.5s ease-out;
     border-radius: 100%;
     padding: 15px;
+    margin-bottom: 8px;
 /*    background-color: #0f4c75;*/
-    background-color: #3282b8;
+/*    background-color: #3282b8;*/
+    background-color: #28a745;
 }
 
 /***************
-5. goal css
+5. Symptom css
 ****************/
 #symptom{
-    background-image: url(../images/img7.jpg);
+    background-image: url(../images/imgbgd.jpg);
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+  
 }
 #symptom .content article{
     color: white;
-    background: rgba(15,76,117,0.9);
+/*    background: rgba(15,76,117,0.9);*/
+    background: rgba(49,48,48,0.8);
     font-weight: 500;
 }
 #symptom .content article .imp::first-letter{
