@@ -22,4 +22,9 @@
     #symptom .notimp{
         display: none;
     }
+    .main-footer,.faq h5{
+        font-size: 16px;
+    }
+    #services .icon-card{
+        
 }
