@@ -3,6 +3,19 @@
 @import url('https://fonts.googleapis.com/css?family=Lobster');
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,600,600i,700,700i');
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,600,600i,700,700i,800,800i,900,900i');
+
+/* INDEX */
+/***************
+1.Navbar
+2.Jumbotron
+3.carousel
+4.services
+5.symptom
+6.footer
+7.about
+8.profile
+****************/
+
 body {
     background: #f1f1f1;
     color: #313030;
@@ -181,7 +194,7 @@ a {
 ****************/
 
 #symptom {
-    background-image: url(../images/img7.jpg);
+    background-image: url(../images/imgbgd.jpg);
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -264,8 +277,9 @@ a {
       display: block;
     }
   }
+
 /****************
-8. profile css
+8. profilr css
 *****************/
  #wrapper {
     overflow-x: hidden;
@@ -307,4 +321,13 @@ a {
     height: 10em;
     width: 10em;
     border-radius: 100%;
+}
+#patient-profile .patient-img{width:8em;height: 8em}#patient-profile .doctor-img{width:35px}#patient-profile .patient-name{text-align:center}#patient-profile .patient-details-row{position:absolute}#patient-profile .patient-info-heading{font-weight:900;display:inline-block;width:100px}#patient-profile .diesase-badge{margin-right:5px}.patient-wrapper.table td{padding:.75rem .8rem}.patient-wrapper .action i.text-success{margin-right:.3rem}
+.bg-gradient-y-info{
+    background-image:linear-gradient(to bottom,#0c84d1 0,#4eb4f5 100%);
+    background-repeat:repeat-x
+}
+.bg-gradient-y-warning{
+    background-image:linear-gradient(to bottom,#233329 0,#63D471 100%);
+    background-repeat:repeat-x
 }
