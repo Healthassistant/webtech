@@ -25,6 +25,19 @@
     .main-footer,.faq h5{
         font-size: 16px;
     }
-    #services .icon-card{
+
+    #sidebar-wrapper {
+    margin-left: 0;
+    }
+
+    #page-content-wrapper {
+    min-width: 0;
+    width: 100%;
+    }
+
+    #wrapper.toggled #sidebar-wrapper {
+    margin-left: -15rem;
+    }
+    
         
 }
