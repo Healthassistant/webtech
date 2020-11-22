@@ -1,5 +1,5 @@
 let modal = document.getElementById("login-modal");
-const formUrl = "SomeUrl"
+const formUrl = "login"
 const forgetUrl = "ForgetUrl"
 
 function openModal(type) {

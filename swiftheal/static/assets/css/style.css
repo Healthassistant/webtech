@@ -3,6 +3,19 @@
 @import url('https://fonts.googleapis.com/css?family=Lobster');
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,600,600i,700,700i');
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,600,600i,700,700i,800,800i,900,900i');
+
+/* INDEX */
+/***************
+1.Navbar
+2.Jumbotron
+3.carousel
+4.services
+5.symptom
+6.footer
+7.about
+8.profile
+****************/
+
 body {
     background: #f1f1f1;
     color: #313030;
@@ -96,6 +109,7 @@ a {
     border-color: #0f4c75;
 }
 
+
 .carousel-indicators li {
     border-radius: 100%;
     border-color: white;
@@ -120,7 +134,7 @@ a {
 
 
 /***************
-5. services css
+4. services css
 ****************/
 
 #services {
@@ -131,18 +145,19 @@ a {
 
 .icon-card {
     border-radius: 16px;
-    background: #313030;
+    background: rgba(0, 0, 0, 0.6);
     padding: 1em;
     margin: 0.5em;
+    min-height: 18em;
     transition: all 0.3s ease-out;
-    box-shadow: 3px 2px 3px 1px rgba(0, 0, 0, 0.6);
-    -moz-box-shadow: 3px 2px 3px 1px rgba(0, 0, 0, 0.6);
-    -webkit-box-shadow: 3px 2px 3px 1px rgba(0, 0, 0, 0.6);
-    -o-box-shadow: 3px 2px 3px 1px rgba(0, 0, 0, 0.6);
+    box-shadow: 3px 2px 3px 1px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 3px 2px 3px 1px rgba(0, 0, 0, 0.4);
+    -webkit-box-shadow: 3px 2px 3px 1px rgba(0, 0, 0, 0.4);
+    -o-box-shadow: 3px 2px 3px 1px rgba(0, 0, 0, 0.4);
 }
 
 .icon-card:hover {
-    background: #999999;
+    background: #313030;
     transition: all 0.3s ease-out;
     box-shadow: 3px 3px 4px 4px rgba(0, 0, 0, 0.6);
     -moz-box-shadow: 3px 3px 4px 4px rgba(0, 0, 0, 0.6);
@@ -208,7 +223,7 @@ a {
 
 
 /***************
-5. footer css
+6. footer css
 ****************/
 
 .main-footer,
@@ -221,4 +236,98 @@ a {
 .main-footer h4 {
     color: #FFF;
     padding: 0 5px 15px 0;
+}
+/****************
+7. about css
+*****************/
+
+  .container {
+    padding: 0 16px;
+  }
+  
+  .container::after, .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
+  .title {
+    color: grey;
+  }
+  
+  .button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  .button:hover {
+    background-color: #555;
+  }
+  
+  @media screen and (max-width: 650px) {
+    .column {
+      width: 100%;
+      display: block;
+    }
+  }
+
+/****************
+8. profilr css
+*****************/
+ #wrapper {
+    overflow-x: hidden;
+ }
+
+#sidebar-wrapper {
+  min-height: 100vh;
+  margin-left: -15rem;
+  -webkit-transition: margin .25s ease-out;
+  -moz-transition: margin .25s ease-out;
+  -o-transition: margin .25s ease-out;
+  transition: margin .25s ease-out;
+}
+
+#sidebar-wrapper .sidebar-heading {
+  padding: 0.875rem 1.25rem;
+  font-size: 1.2rem;
+}
+
+#sidebar-wrapper .list-group {
+  width: 15rem;
+}
+
+#page-content-wrapper {
+  width: 100vw;
+}
+
+#wrapper.toggled #sidebar-wrapper {
+  margin-left: 0;
+}
+.profile .btn-prf {
+    height: 50px;
+    width: 50px;
+    color: white;
+    margin-top: 10px;
+    
+}
+.profile #profile_pic{
+    height: 10em;
+    width: 10em;
+    border-radius: 100%;
+}
+#patient-profile .patient-img{width:8em;height: 8em}#patient-profile .doctor-img{width:35px}#patient-profile .patient-name{text-align:center}#patient-profile .patient-details-row{position:absolute}#patient-profile .patient-info-heading{font-weight:900;display:inline-block;width:100px}#patient-profile .diesase-badge{margin-right:5px}.patient-wrapper.table td{padding:.75rem .8rem}.patient-wrapper .action i.text-success{margin-right:.3rem}
+.bg-gradient-y-info{
+    background-image:linear-gradient(to bottom,#0c84d1 0,#4eb4f5 100%);
+    background-repeat:repeat-x
+}
+.bg-gradient-y-warning{
+    background-image:linear-gradient(to bottom,#233329 0,#63D471 100%);
+    background-repeat:repeat-x
 }

@@ -1,0 +1,680 @@
+
+{% extends 'base.html' %}
+
+
+{% block title %} 
+Profile
+{% endblock title %} 
+
+
+
+{% block body %}
+
+<!--MAIN STARTS-->
+<main>
+
+<!--Profile Start-->
+<section class="profile my-5">
+    <div class="d-flex" id="wrapper">
+
+    <!-- Sidebar -->
+    <div class="bg-light border-right" id="sidebar-wrapper">
+      <div class="sidebar-heading">Name</div>
+      <div class="text-muted text-sm-center"><img src="static/assets/images/user.png" id="profile_pic" class="d-inline-block align-top " alt="" loading="lazy">
+      <h6>Username </h6>
+          <h6>UserId</h6>
+      </div>
+      <hr>
+      <div class="" >
+       <ul class=" list-group list-group-flush">
+            <li class="list-group-item list-group-item-action active bg-light border-0">
+            <a href="#myprofile" data-toggle="list" class="text-dark"><i class="fa fa-user"></i> My Profile</a>
+            </li>
+          <li class="list-group-item list-group-item-action bg-light border-0">
+              <a href="#dashboard" data-toggle="list" class="text-dark"> <i class="fa fa-address-card"></i> Dashboard</a>
+          </li>
+        <li class="list-group-item list-group-item-action bg-light border-0">
+            <a href="#overview" data-toggle="list" class="text-dark"><i class="fa fa-history"></i> Overview</a>
+        </li>
+        <li class="list-group-item list-group-item-action bg-light border-0">
+            <a href="#setting" data-toggle="list" class="text-dark"><i class="fa fa-cog"></i> Account Settings</a>
+        </li>
+        <li class="list-group-item list-group-item-action bg-light border-0">
+            <a href="#security" data-toggle="list" class="text-dark"><i class="fa fa-lock"></i> Security</a>
+        </li>
+       </ul>
+      </div>
+      
+    </div>
+    
+    <!-- /#sidebar-wrapper -->
+
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+    <button class="btn btn-success btn-prf" id="menu-toggle">
+        <i class="fa fa-list"></i>
+    </button>
+    
+    <div class="tab-content">  
+<!--MYPROFILE start-->
+     <div id="myprofile" class="tab-pane fade active show">
+      <div class="container ">
+       
+        <h1 class="mt-4 text-center">My Profile</h1>
+         <div class="row my-5">
+             <div class="col-sm-3">
+                <ul class="list-group">
+                  <li class="list-group-item text-center bg-secondary"><img src="static/assets/images/user.png" id="profile_pic" class="d-inline-block align-top " alt="" loading="lazy"></li>
+                    <li class="list-group-item">Status: <span>Admin</span></li>
+                </ul>
+            </div>
+
+            <div class="col-sm-9">
+                <table class="table ">
+                            <thead>
+                                <tr>
+                                    <th colspan="2">BASIC INFORMATION</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="field">Name</td>
+                                    <td class="value">{{name}}</td>
+                                </tr>
+                                <tr>
+                                    <td class="field">Date of Birth</td>
+                                    <td class="value">{{dob}}</td>
+                                </tr>
+                                <tr>
+                                    <td class="field">Gender</td>
+                                    <td class="value">{{gender}}</td>
+                                </tr>
+                                <tr>
+                                    <td class="field">Age</td>
+                                    <td class="value">{{age}}</td>
+                                </tr>
+                                <tr>
+                                    <td class="field">Aadhar Id</td>
+                                    <td class="value">{{aadhar_id}}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+            </div>
+         </div>
+          
+        <div class="container ">
+        
+                                 
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th colspan="2">CONTACT INFORMATION</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="field">Phone Number</td>
+                                    <td class="value">{{phone_number}}</td>
+                                </tr>
+                                <tr>
+                                    <td class="field">Email</td>
+                                    <td class="value">{{email}}</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td class="field">Address</td>
+                                    <td class="value">
+                                    <p>{{address}}</p>
+                                    <p>{{state}}</p>
+                                    <p>{{pin}}</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>            
+        
+        </div>   
+      </div>
+      </div>
+<!-- my profile ends-->
+   
+    <!--dashboard starts-->
+    <div id="dashboard" class="tab-pane fade">
+    <div class="container">
+       <h2 class="m-3 text-center">My Dashboard</h2>
+       <div class="row">
+        <div class="col-md-3 col-sm-6 col-xs-12">
+            <div class="panel panel-dark p-4 rounded" style="background:darkseagreen;">
+                <div class="panel-body text-center">
+                	<p class="text-uppercase mar-btm text-sm">Visit Today</p>
+                	<i class="fa fa-users fa-3x"></i>
+                	<p class="h4 text-thin">254,487</p>
+
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6 col-xs-12">
+        	<div class="panel panel-dark p-4 rounded" style="background-color:darkseagreen;">
+        		<div class="panel-body text-center">
+        			<p class="text-uppercase mar-btm text-sm">Comments</p>
+        			<i class="fa fa-comment fa-3x"></i>
+        			<p class="h4 text-thin">873</p>
+        		</div>
+        	</div>
+        </div>
+        <div class="col-md-3 col-sm-6 col-xs-12">
+        	<div class="panel panel-dark p-4 rounded" style="background:darkseagreen;">
+        		<div class="panel-body text-center">
+        			<p class="text-uppercase mar-btm text-sm">New Order</p>
+        			<i class="fa fa-shopping-cart fa-3x"></i>
+        			<p class="h4 text-thin">2,423</p>
+        		</div>
+        	</div>
+        </div>
+        <div class="col-md-3 col-sm-6 col-xs-12">
+        	<div class="panel panel-dark p-4 rounded" style="background:darkseagreen;">
+        		<div class="panel-body text-center">
+        			<p class="text-uppercase mar-btm text-sm">Earning</p>
+        			<i class="fa fa-check fa-3x"></i>
+        			<p class="h4 text-thin">7,428</p>
+        			
+        		</div>
+        	</div>
+        </div>        
+	</div>
+       <div class="row">
+        <div class="col-sm-8 card my-5" >
+  <div class="card-header">
+    <h2 class=" d-inline-block">Upcoming Appointments</h2>
+    <a href="appointments.html" class="btn btn-success float-right">View all</a>
+  </div>
+  <table class="card-table table">
+    <thead>
+      <tr>
+        <th>Patient Name</th>
+		<th>Timing</th>
+		<th class=""> </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class = " text-decoration-none" href="profile.html">Bernardo Galaviz - <span>New York, USA</span></a></td>
+        <td><p>7.00 PM</p></td>
+        <td><a href="appointments.html" class="btn btn-outline-success take-btn">Take up</a></td>
+      </tr>
+      <tr>
+        <td><a class = " text-decoration-none" href="profile.html">Bernardo Galaviz - <span>New York, USA</span></a></td>
+        <td><p>7.00 PM</p></td>
+        <td><a href="appointments.html" class="btn btn-outline-success take-btn">Take up</a></td>
+      </tr>
+      <tr>
+        <td><a class = " text-decoration-none" href="profile.html">Bernardo Galaviz - <span>New York, USA</span></a></td>
+        <td><p>7.00 PM</p></td>
+        <td><a href="appointments.html" class="btn btn-outline-success take-btn">Take up</a></td>
+      </tr>
+      <tr>
+        <td><a class = " text-decoration-none" href="profile.html">Bernardo Galaviz - <span>New York, USA</span></a></td>
+        <td><p>7.00 PM</p></td>
+        <td><a href="appointments.html" class="btn btn-outline-success take-btn">Take up</a></td>
+      </tr>
+      <tr>
+        <td><a class = " text-decoration-none" href="profile.html">Bernardo Galaviz - <span>New York, USA</span></a></td>
+        <td><p>7.00 PM</p></td>
+        <td><a href="appointments.html" class="btn btn-outline-success take-btn">Take up</a></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+  <div class="col-sm-4 my-5">
+          
+          <div class="col my-3">
+            <div class="card bg-pattern">
+                <div class="card-body">
+                    <div class="float-right">
+                        <i class="fa fa-archive text-success h4 ml-3"></i>
+                    </div>
+                    <h5 class="font-size-20 mt-0 pt-1">24</h5>
+                    <p class="text-muted mb-0">Total Patients</p>
+                </div>
+            </div>
+        </div>
+        <div class="col my-3">
+            <div class="card bg-pattern">
+                <div class="card-body">
+                    <div class="float-right">
+                        <i class="fa fa-archive text-success h4 ml-3"></i>
+                    </div>
+                    <h5 class="font-size-20 mt-0 pt-1">24</h5>
+                    <p class="text-muted mb-0">Appointments</p>
+                </div>
+            </div>
+        </div>
+     
+ 
+          <div class="col my-3">
+            <div class="card bg-pattern">
+                <div class="card-body">
+                    <div class="float-right">
+                        <i class="fa fa-archive text-success h4 ml-3"></i>
+                    </div>
+                    <h5 class="font-size-20 mt-0 pt-1">24</h5>
+                    <p class="text-muted mb-0">New Patients</p>
+                </div>
+            </div>
+        </div>
+        <div class="col my-3">
+            <div class="card bg-pattern">
+                <div class="card-body">
+                    <div class="float-right">
+                        <i class="fa fa-archive text-success h4 ml-3"></i>
+                    </div>
+                    <h5 class="font-size-20 mt-0 pt-1">24</h5>
+                    <p class="text-muted mb-0">Availble Appointments</p>
+                </div>
+            </div>
+        </div>
+   
+  </div>
+   </div>
+   <div class="row">
+       <div class=" card mb-5 " >
+  <div class="card-header ">
+    <h2 class=" d-inline-block">Today's Appointments</h2>
+    <a href="appointments.html" class="btn btn-success float-right">View all</a>
+  </div>
+  <table class="card-table table">
+    <thead>
+      <tr>
+        <th>Patient Name</th>
+		<th>Timing</th>
+		<th>Status</th>
+        <th> </th> 
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class = " text-decoration-none" href="profile.html">Bernardo Galaviz - <span>New York, USA</span></a></td>
+        <td><p>7.00 PM</p></td>
+        <td>Pending</td>
+        <td><a href="appointments.html" class="btn btn-outline-success take-btn">Cancel</a></td>
+      </tr>
+       <tr>
+        <td><a class = " text-decoration-none" href="profile.html">Bernardo Galaviz - <span>New York, USA</span></a></td>
+        <td><p>7.00 PM</p></td>
+        <td>Pending</td>
+        <td><a href="appointments.html" class="btn btn-outline-success take-btn">Cancel</a></td>
+      </tr>
+       <tr>
+        <td><a class = " text-decoration-none" href="profile.html">Bernardo Galaviz - <span>New York, USA</span></a></td>
+        <td><p>7.00 PM</p></td>
+        <td>Pending</td>
+        <td><a href="appointments.html" class="btn btn-outline-success take-btn">Cancel</a></td>
+      </tr>
+       <tr>
+        <td><a class = " text-decoration-none" href="profile.html">Bernardo Galaviz - <span>New York, USA</span></a></td>
+        <td><p>7.00 PM</p></td>
+        <td>Pending</td>
+        <td><a href="appointments.html" class="btn btn-outline-success take-btn">Cancel</a></td>
+      </tr>
+        <tr>
+        <td><a class = " text-decoration-none" href="profile.html">Bernardo Galaviz - <span>New York, USA</span></a></td>
+        <td><p>7.00 PM</p></td>
+        <td>Pending</td>
+        <td><a href="appointments.html" class="btn btn-outline-success take-btn">Cancel</a></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+   </div>
+    </div>
+    </div>
+    <!--dashboard ends-->
+    
+   <!--overview starts-->
+   <div id="overview" class="tab-pane fade">
+      <div class="container " id="patient-profile">
+          <h2 class="text-center">OVERVIEW</h2>
+           <div class="row my-5">
+        <div class="col-lg-6 col-md-12">
+            <div class="card">
+                <div class="card-body" style="min-height: 15em">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-4 d-flex justify-content-around">
+                            <div class="patient-img-name text-center">
+                                <img src="static/assets/images/img4.jpg" alt=""
+                                    class="card-img-top mb-1 patient-img img-fluid rounded-circle">
+                                <h4>Sarah lance</h4>
+                            </div>
+                        </div>
+                        <div class="col-lg-8 col-md-8 d-flex justify-content-around">
+                            <div class="patient-info">
+                                <ul class="list-unstyled">
+                                    <li>
+                                        <div class="patient-info-heading">Birth:</div> 20th Jan, 1992
+                                    </li>
+                                    <li>
+                                        <div class="patient-info-heading">Email: </div> sarahlance@gmail.com
+                                    </li>
+                                    <li>
+                                        <div class="patient-info-heading">Contact:</div> 5544332211
+                                    </li>
+                                    <li>
+                                        <div class="patient-info-heading">Address:</div> 55th street, Queen City
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+            <div class="card bg-gradient-y-info" style="min-height: 15em">
+                <div class="card-body">
+                    <ul class="list-unstyled text-white patient-info-card">
+                        <li><span class="patient-info-heading">Blood Type :</span> AB+</li>
+                        <li><span class="patient-info-heading">Allergies :</span> Milk, Pineapple, Kiwi</li>
+                        <li><span class="patient-info-heading">Disease :</span> Daibetes</li>
+                        <li><span class="patient-info-heading">Last Visit :</span> 10th Oct, 2018</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+            <div class="card bg-gradient-y-warning" style="min-height: 15em">
+                <div class="card-header">
+                    <h5 class="card-title text-white">Regular Checkups</h5>
+                </div>
+                <div class="card-content mx-2">
+                    <ul class="list-unstyled text-white">
+                        <li>Dr. Phil Gray <span class="float-right">Dentist</span></li>
+                        <li>Dr. Irene Baker <span class="float-right">Dermatologist</span></li>
+                        <li>Dr. Diane Page <span class="float-right">ID Physician</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12">
+            <div class="card">
+                <div class="card-body">
+                    <h2 class="card-title">Medical History</h2>
+                    <div class="table-responsive">
+                        <table class="table patient-wrapper">
+                            <tbody>
+                                <tr>
+                                    <td class=" border-top-0 align-middle">
+                                        <img src="static/assets/images/img4.jpg" alt=""
+                                            class="rounded-circle doctor-img">
+                                    </td>
+                                    <td class="align-middle border-top-0">Dr. Phil Gray</td>
+                                    <td class="align-middle border-top-0">Dentist</td>
+                                    <td class="align-middle border-top-0">
+                                        <i class="la la-calendar-check-o"></i> 15/10/18
+                                    </td>
+                                    <td class="align-middle border-top-0">
+                                        <i class="la la-map-marker"></i> 58th Street, Manhattan, NYC
+                                    </td>
+                                    <td class="align-middle border-top-0">
+                                        <i class="la la-circle text-danger"></i> Hospital Visit
+                                    </td>
+                                    <td class="align-middle border-top-0">
+                                        <div class="action">
+                                            <a href="#"><i class="ft-edit text-success"></i></a>
+                                            <a href="#"><i class="ft-trash-2 text-warning"></i></a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="align-middle">
+                                        <img src="static/assets/images/img4.jpg" alt=""
+                                            class="rounded-circle doctor-img">
+                                    </td>
+                                    <td class="align-middle">Dr. Irene Baker</td>
+                                    <td class="align-middle">Dermatologist</td>
+                                    <td class="align-middle">
+                                        <i class="la la-calendar-check-o"></i> 20/10/18
+                                    </td>
+                                    <td class="align-middle">
+                                        <i class="la la-map-marker"></i> 58th Street, Manhattan, NYC
+                                    </td>
+                                    <td class="align-middle">
+                                        <i class="la la-circle text-primary"></i> Medical Consultion
+                                    </td>
+                                    <td class="align-middle">
+                                        <div class="action">
+                                            <a href="#"><i class="ft-edit text-success"></i></a>
+                                            <a href="#"><i class="ft-trash-2 text-warning"></i></a>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td class="align-middle border-bottom-0">
+                                        <img src="static/assets/images/img4.jpg" alt=""
+                                            class="rounded-circle doctor-img">
+                                    </td>
+                                    <td class="align-middle border-bottom-0">Dr. Diane Paige</td>
+                                    <td class="align-middle border-bottom-0">ID Physician</td>
+                                    <td class="align-middle border-bottom-0">
+                                        <i class="la la-calendar-check-o"></i> 25/10/18
+                                    </td>
+                                    <td class="align-middle border-bottom-0">
+                                        <i class="la la-map-marker"></i> 58th Street, Manhattan, NYC
+                                    </td>
+                                    <td class="align-middle border-bottom-0">
+                                        <i class="la la-circle text-danger"></i> Hospital Visit
+                                    </td>
+                                    <td class="align-middle border-bottom-0">
+                                        <div class="action">
+                                            <a href="#"><i class="ft-edit text-success"></i></a>
+                                            <a href="#"><i class="ft-trash-2 text-warning"></i></a>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+       </div>
+    </div>
+   <!--overview ends-->
+    
+    <!--setting starts-->
+    <div id="setting" class="tab-pane fade">
+      <div class="container ">
+           <h1 class="my-5">Edit Details</h1>
+                
+              
+           <form action="">
+                            <div class="form-group">
+                                <label for="aadharID">Aadhar ID:</label>
+                                <input type="text" class="form-control" name="aadharID" value={{aadhar_id}}>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number:</label>
+                                <input type="tel" class="form-control" name="phone" value={{phone_number}}>
+                            </div>
+                            <div class="form-group">
+                                <label for="name">Name:</label>
+                                <input type="text" class="form-control" name="name" value={{name}}>
+                            </div>
+                            <div class="form-group">
+                                <label for="age">Age:</label>
+                                <input type="number" name="age" min="1" max="120" class="form-control" value={{age}}>
+                            </div>
+                            <div class="form-group py-2">
+                                <label for="gender">Gender:</label><br>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="gender" value="M">
+                                    <label class="form-check-label" for="gender">Male</label>
+                                </div><br>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="gender" value="F">
+                                    <label class="form-check-label" for="gender">Female</label>
+                                </div><br>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="gender" value="O">
+                                    <label class="form-check-label" for="gender">Others</label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="State">State:</label>
+                                <select name="state" id="state" class="form-control"> 
+                                    <option value="Andhra Pradesh" selected>Andhra Pradesh</option>
+                                    <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+                                    <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                                    <option value="Assam">Assam</option>
+                                    <option value="Bihar">Bihar</option>
+                                    <option value="Chandigarh">Chandigarh</option>
+                                    <option value="Chhattisgarh">Chhattisgarh</option>
+                                    <option value="Dadar and Nagar Haveli">Dadar and Nagar Haveli</option>
+                                    <option value="Daman and Diu">Daman and Diu</option>
+                                    <option value="Delhi">Delhi</option>
+                                    <option value="Lakshadweep">Lakshadweep</option>
+                                    <option value="Puducherry">Puducherry</option>
+                                    <option value="Goa">Goa</option>
+                                    <option value="Gujarat">Gujarat</option>
+                                    <option value="Haryana">Haryana</option>
+                                    <option value="Himachal Pradesh">Himachal Pradesh</option>
+                                    <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+                                    <option value="Jharkhand">Jharkhand</option>
+                                    <option value="Karnataka">Karnataka</option>
+                                    <option value="Kerala">Kerala</option>
+                                    <option value="Madhya Pradesh">Madhya Pradesh</option>
+                                    <option value="Maharashtra">Maharashtra</option>
+                                    <option value="Manipur">Manipur</option>
+                                    <option value="Meghalaya">Meghalaya</option>
+                                    <option value="Mizoram">Mizoram</option>
+                                    <option value="Nagaland">Nagaland</option>
+                                    <option value="Odisha">Odisha</option>
+                                    <option value="Punjab">Punjab</option>
+                                    <option value="Rajasthan">Rajasthan</option>
+                                    <option value="Sikkim">Sikkim</option>
+                                    <option value="Tamil Nadu">Tamil Nadu</option>
+                                    <option value="Telangana">Telangana</option>
+                                    <option value="Tripura">Tripura</option>
+                                    <option value="Uttar Pradesh">Uttar Pradesh</option>
+                                    <option value="Uttarakhand">Uttarakhand</option>
+                                    <option value="West Bengal">West Bengal</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="address">Address:</label>
+                                <input type="text" class="form-control" name="address" value={{address}}>
+                            </div>
+                            <div class="form-group">
+                                <label for="pin">PIN:</label>
+                                <input type="text" class="form-control" name="pin" value={{pin}}>
+                            </div>
+                        </form>
+                    
+                    <h1 class="my-5">Optional Details</h1>
+                    <form action="">
+                       <div class="form-group">
+                           <img src="static/assets/images/user.png" class="img-circle img-responsive" style="width: 10em;height: 10em;" alt="" loading="lazy">
+                            <label class="font-weight-bold align-bottom">Change Profile Picture: </label>
+                            <input type="file" class="align-bottom     " > <br>
+                              <div class="text-secondary small mt-1">Allowed JPG, GIF or PNG</div>
+                                <br><br>
+                       </div>
+                        <div class="form-group">
+                                <label for="email">Email:</label>
+                                <input type="text" class="form-control" name="address" value={{email}}>
+                         </div>
+                         <div class="form-group">
+                                <label for="dob">Date Of Birth:</label>
+                                <input type="date" class="form-control" name="address" value={{dob}}>
+                         </div>
+                         <div class="text-center">
+                         <button type="button" class="btn btn-success m-5">Save Changes</button>
+                        </div>
+                    </form>
+        </div>
+        </div>
+<!--setting ends-->
+   
+   <!--security starts-->
+   <div id="security" class="tab-pane fade">
+      <div class="container ">
+       <h2>Change Your Password</h2>
+       <form class="card mt-5">
+                <div class="card-body">
+                    <div class="form-group">
+                       <small class="form-text text-muted">Type in the Adhaar Id and mobile number you used when you registered with SwiftHeal.</small><br>
+                        <input class="form-control my-3" type="text" placeholder="Enter your Adhaar Id"  required="">
+                        <input class="form-control my-3" type="text" placeholder="Enter your Registered Mobile Number" required="">
+                        
+                        <button class="btn btn-primary mb-4" >Verify Mobile Number</button><br>
+                        
+                        <input class="form-control" type="password" placeholder="Enter OTP" required="">
+                    </div>
+                </div>
+                <div class="card-footer my-3 text-center">
+                    <button class="btn btn-success mt-3" type="submit">Get New Password</button>
+                </div>
+            </form>
+        <h2 class="mt-5">Permissions</h2>
+            <ul class="list-group ">
+               <li class="list-group-item">
+                Condition
+                <a class="btn btn-success btn-action mr-1" data-toggle="tooltip" title="" data-original-title="Edit"><i class="fas fa-check"></i></a>
+                <a class="btn btn-danger btn-action" data-toggle="tooltip" title=""  data-original-title="Delete"><i class="fas fa-times"></i></a> 
+              </li>
+               <li class="list-group-item">
+                Condition
+                <a class="btn btn-success btn-action mr-1" data-toggle="tooltip" title="" data-original-title="Edit"><i class="fas fa-check"></i></a>
+                <a class="btn btn-danger btn-action" data-toggle="tooltip" title=""  data-original-title="Delete"><i class="fas fa-times"></i></a> 
+              </li>
+                <li class="list-group-item">
+                Condition
+                <a class="btn btn-success btn-action mr-1" data-toggle="tooltip" title="" data-original-title="Edit"><i class="fas fa-check"></i></a>
+                <a class="btn btn-danger btn-action" data-toggle="tooltip" title=""  data-original-title="Delete"><i class="fas fa-times"></i></a> 
+              </li>
+              <li class="list-group-item">
+                Condition
+                <a class="btn btn-success btn-action mr-1" data-toggle="tooltip" title="" data-original-title="Edit"><i class="fas fa-check"></i></a>
+                <a class="btn btn-danger btn-action" data-toggle="tooltip" title=""  data-original-title="Delete"><i class="fas fa-times"></i></a> 
+              </li>
+                <li class="list-group-item">
+                Condition
+                <a class="btn btn-success btn-action mr-1" data-toggle="tooltip" title="" data-original-title="Edit"><i class="fas fa-check"></i></a>
+                <a class="btn btn-danger btn-action" data-toggle="tooltip" title=""  data-original-title="Delete"><i class="fas fa-times"></i></a> 
+              </li>
+            </ul>
+                
+        
+        </div>
+        </div>
+<!--security ends-->
+    </div>
+    
+    </div>
+    <!-- /#page-content-wrapper -->
+
+  </div>
+  <!-- /#wrapper -->
+</section>
+<!--Profile End-->
+
+
+
+</main> 
+
+
+{% endblock body %}
+   
+{% block script %}
+<script>
+     $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+}).click();
+  </script>
+{% endblock script %}
+
+   
