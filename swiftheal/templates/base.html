@@ -88,7 +88,8 @@
                             <span aria-hidden="true" class="text-danger">&times;</span>
                         </button>
                     </div>
-                    <form action="">
+                    <form action="/patient/signup" method='POST'>
+                        {%csrf_token%}
                         <div class="modal-body">
                             <div class="form-group">
                                 <label for="aadharID">Aadhar ID:</label>
@@ -172,11 +173,12 @@
                             </div>
                         </div>
 
-                    </form>
+                    
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-success">Sign Up</button>
+                        <button type="submit" class="btn btn-success">Sign Up</button>
                     </div>
+                   </form>
                 </div>
             </div>
         </div>
@@ -191,7 +193,8 @@
                             <span aria-hidden="true" class='text-danger'>&times;</span>
                         </button>
                     </div>
-                    <form id="loginForm" action="">
+                    <form id="loginForm" action="" method='POST'>
+                        {% csrf_token %}
                         <div class="modal-body">
                             <div id="phoneselect">
                                 <div class="form-group">
